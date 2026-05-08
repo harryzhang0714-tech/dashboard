@@ -1,0 +1,83 @@
+Script started on 2026-05-08 02:47:33+08:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="284" LINES="70"]
+[?2004h]0;admin@iZj6cd1k36k02rqc7namjmZ: ~[01;32madmin@iZj6cd1k36k02rqc7namjmZ[00m:[01;34m~[00m$ 
+[?2004l[?2004h]0;admin@iZj6cd1k36k02rqc7namjmZ: ~[01;32madmin@iZj6cd1k36k02rqc7namjmZ[00m:[01;34m~[00m$ [7mhttps://docs.ntfy.sh/install/[27mhttps://docs.ntfy.sh/install/，理解一下[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[?2004l[?2004h]0;admin@iZj6cd1k36k02rqc7namjmZ: ~[01;32madmin@iZj6cd1k36k02rqc7namjmZ[00m:[01;34m~[00m$ uname -r && systemctl --version
+[?2004l6.8.0-63-generic
+[0;1;39msystemd 255[0m (255.4-1ubuntu8.8)
+[0;1;32m+[0;32mPAM[0m [0;1;32m+[0;32mAUDIT[0m [0;1;32m+[0;32mSELINUX[0m [0;1;32m+[0;32mAPPARMOR[0m [0;1;32m+[0;32mIMA[0m [0;1;32m+[0;32mSMACK[0m [0;1;32m+[0;32mSECCOMP[0m [0;1;32m+[0;32mGCRYPT[0m [0;1;31m-[0;31mGNUTLS[0m [0;1;32m+[0;32mOPENSSL[0m [0;1;32m+[0;32mACL[0m [0;1;32m+[0;32mBLKID[0m [0;1;32m+[0;32mCURL[0m [0;1;32m+[0;32mELFUTILS[0m [0;1;32m+[0;32mFIDO2[0m [0;1;32m+[0;32mIDN2[0m [0;1;31m-[0;31mIDN[0m [0;1;32m+[0;32mIPTC[0m [0;1;32m+[0;32mKMOD[0m [0;1;32m+[0;32mLIBCRYPTSETUP[0m [0;1;32m+[0;32mLIBFDISK[0m [0;1;32m+[0;32mPCRE2[0m [0;1;31m-[0;31mPWQUALITY[0m [0;1;32m+[0;32mP11KIT[0m [0;1;32m+[0;32mQRENCODE[0m [0;1;32m+[0;32mTPM2[0m [0;1;32m+[0;32mBZIP2[0m [0;1;32m+[0;32mLZ4[0m [0;1;32m+[0;32mXZ[0m [0;1;32m+[0;32mZLIB[0m [0;1;32m+[0;32mZSTD[0m [0;1;31m-[0;31mBPF_FRAMEWORK[0m [0;1;31m-[0;31mXKBCOMMON[0m [0;1;32m+[0;32mUTMP[0m [0;1;32m+[0;32mSYSVINIT[0m default-hierarchy=unified
+[?2004h]0;admin@iZj6cd1k36k02rqc7namjmZ: ~[01;32madmin@iZj6cd1k36k02rqc7namjmZ[00m:[01;34m~[00m$ 
+[?2004l[?2004h]0;admin@iZj6cd1k36k02rqc7namjmZ: ~[01;32madmin@iZj6cd1k36k02rqc7namjmZ[00m:[01;34m~[00m$ ls -l /etc/ntfy/server.yml
+[?2004l-rw-r--r-- 1 root root 23174 Apr 21 23:02 /etc/ntfy/server.yml
+[?2004h]0;admin@iZj6cd1k36k02rqc7namjmZ: ~[01;32madmin@iZj6cd1k36k02rqc7namjmZ[00m:[01;34m~[00m$ 
+[?2004l[?2004h]0;admin@iZj6cd1k36k02rqc7namjmZ: ~[01;32madmin@iZj6cd1k36k02rqc7namjmZ[00m:[01;34m~[00m$ sudo systemctl is-enabled ntfy
+[?2004ldisabled
+[?2004h]0;admin@iZj6cd1k36k02rqc7namjmZ: ~[01;32madmin@iZj6cd1k36k02rqc7namjmZ[00m:[01;34m~[00m$ 
+[?2004l[?2004h]0;admin@iZj6cd1k36k02rqc7namjmZ: ~[01;32madmin@iZj6cd1k36k02rqc7namjmZ[00m:[01;34m~[00m$ sudo systemctl enable ntfy
+[?2004lCreated symlink /etc/systemd/system/multi-user.target.wants/ntfy.service → /usr/lib/systemd/system/ntfy.service.
+[?2004h]0;admin@iZj6cd1k36k02rqc7namjmZ: ~[01;32madmin@iZj6cd1k36k02rqc7namjmZ[00m:[01;34m~[00m$ 
+[?2004l[?2004h]0;admin@iZj6cd1k36k02rqc7namjmZ: ~[01;32madmin@iZj6cd1k36k02rqc7namjmZ[00m:[01;34m~[00m$ 那我怎么配置的我的topic[K
+[?2004l[?2004h]0;admin@iZj6cd1k36k02rqc7namjmZ: ~[01;32madmin@iZj6cd1k36k02rqc7namjmZ[00m:[01;34m~[00m$ ntfy access set mytesttopic '*' publish,subscribe
+[?2004ltoo many arguments, please check 'ntfy access --help' for usage details
+[?2004h]0;admin@iZj6cd1k36k02rqc7namjmZ: ~[01;32madmin@iZj6cd1k36k02rqc7namjmZ[00m:[01;34m~[00m$ 
+[?2004l[?2004h]0;admin@iZj6cd1k36k02rqc7namjmZ: ~[01;32madmin@iZj6cd1k36k02rqc7namjmZ[00m:[01;34m~[00m$ ntfy access --help
+[?2004lNAME:
+   ntfy access - Grant/revoke access to a topic, or show access
+
+USAGE:
+   ntfy access [USERNAME [TOPIC [PERMISSION]]]
+
+CATEGORY:
+   Server commands
+
+DESCRIPTION:
+   Manage the access control list for the ntfy server.
+
+   This is a server-only command. It directly manages the user.db as defined in the server config
+   file server.yml. The command only works if 'auth-file' is properly defined. Please also refer
+   to the related command 'ntfy user'.
+
+   The command allows you to show the access control list, as well as change it, depending on how
+   it is called.
+
+   Usage:
+     ntfy access                            # Shows access control list (alias: 'ntfy user list')
+     ntfy access USERNAME                   # Shows access control entries for USERNAME
+     ntfy access USERNAME TOPIC PERMISSION  # Allow/deny access for USERNAME to TOPIC
+
+   Arguments:
+     USERNAME     an existing user, as created with 'ntfy user add', or "everyone"/"*"
+                  to define access rules for anonymous/unauthenticated clients
+     TOPIC        name of a topic with optional wildcards, e.g. "mytopic*"
+     PERMISSION   one of the following:
+                  - read-write (alias: rw) 
+                  - read-only (aliases: read, ro)
+                  - write-only (aliases: write, wo)
+                  - deny (alias: none)
+
+   Examples:
+     ntfy access                        # Shows access control list (alias: 'ntfy user list')
+     ntfy access phil                   # Shows access for user phil
+     ntfy access phil mytopic rw        # Allow read-write access to mytopic for user phil
+     ntfy access everyone mytopic rw    # Allow anonymous read-write access to mytopic
+     ntfy access everyone "up*" write   # Allow anonymous write-only access to topics "up..." 
+     ntfy access --reset                # Reset entire access control list
+     ntfy access --reset phil           # Reset all access for user phil
+     ntfy access --reset phil mytopic   # Reset access for user phil and topic mytopic
+
+
+OPTIONS:
+   --debug, -d                                                                                                            enable debug logging (default: false) [$NTFY_DEBUG]
+   --trace                                                                                                                enable tracing (very verbose, be careful) (default: false) [$NTFY_TRACE]
+   --no-log-dates, --no_log_dates                                                                                         disable the date/time prefix (default: false) [$NTFY_NO_LOG_DATES]
+   --log-level value, --log_level value                                                                                   set log level (default: "INFO") [$NTFY_LOG_LEVEL]
+   --log-level-overrides value, --log_level_overrides value [ --log-level-overrides value, --log_level_overrides value ]  set log level overrides [$NTFY_LOG_LEVEL_OVERRIDES]
+   --log-format value, --log_format value                                                                                 set log format (default: "text") [$NTFY_LOG_FORMAT]
+   --log-file value, --log_file value                                                                                     set log file, default is STDOUT [$NTFY_LOG_FILE]
+   --config value, -c value                                                                                               config file (default: /etc/ntfy/server.yml) [$NTFY_CONFIG_FILE]
+   --auth-file value, --auth_file value, -H value                                                                         auth database file used for access control [$NTFY_AUTH_FILE]
+   --auth-default-access value, --auth_default_access value, -p value                                                     default permissions if no matching entries in the auth database are found (default: "read-write") [$NTFY_AUTH_DEFAULT_ACCESS]
+   --database-url value, --database_url value                                                                             PostgreSQL connection string for database-backed stores [$NTFY_DATABASE_URL]
+   --reset, -r                                                                                                            reset access for user (and topic) (default: false)
+   --help, -h                                                                                                             show help
+[?2004h]0;admin@iZj6cd1k36k02rqc7namjmZ: ~[01;32madmin@iZj6cd1k36k02rqc7namjmZ[00m:[01;34m~[00m$ 
+[?2004l[?2004h]0;admin@iZj6cd1k36k02rqc7namjmZ: ~[01;32madmin@iZj6cd1k36k02rqc7namjmZ[00m:[01;34m~[00m$ ntfy
